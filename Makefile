@@ -1,13 +1,16 @@
 .PHONY: install
 install: prepare
+	dep ensure
 	go install
 
 .PHONY: build
 build: prepare
+	dep ensure
 	go build
 
 .PHONY: test
 test: prepare
+	dep ensure
 	go test -v
 
 .PHONY: prepare
